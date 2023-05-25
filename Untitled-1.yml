@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: pod-imagepullbackoff-rule
+  namespace: tu-namespace
+spec:
+  groups:
+    - name: pod-rules
+      rules:
+        - alert: PodImagePullBackOff
+          expr: kube_pod_container_status_waiting_reason{reason="ImagePullBackOff"} == 1
+          for: 1m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Pod en estado ImagePullBackOff"
+            description: "El pod {{ $labels.namespace }}/{{ $labels.pod }} está en estado ImagePullBackOff."
