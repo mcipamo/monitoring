@@ -1,4 +1,5 @@
-[!NOTE] 
+Para entender un poco el codigo:
+```
 **metadata.name**: Es el nombre que le das a la regla de Prometheus.
 
 **metadata.namespace**: Especifica el namespace en el que deseas crear la regla.
@@ -18,3 +19,4 @@
 **spec.groups.rules.labels**: Etiquetas asociadas a la alerta. Puedes utilizar etiquetas personalizadas para clasificar y filtrar las alertas.
 
 **spec.groups.rules.annotations**: Anotaciones adicionales que proporcionan información descriptiva sobre la alerta.
+```
