@@ -1,10 +1,10 @@
-metadata.name: Es el nombre que le das a la regla de Prometheus.
+**metadata.name**: Es el nombre que le das a la regla de Prometheus.
 
-metadata.namespace: Especifica el namespace en el que deseas crear la regla.
+**metadata.namespace**: Especifica el namespace en el que deseas crear la regla.
 
-spec.groups: Define los grupos de reglas que quieres incluir en esta definición. Puedes tener varios grupos con diferentes reglas dentro de cada uno.
+**spec.groups**: Define los grupos de reglas que quieres incluir en esta definición. Puedes tener varios grupos con diferentes reglas dentro de cada uno.
 
-spec.groups.name: Nombre del grupo de reglas. Puedes elegir el nombre que desees.
+**spec.groups.name**: Nombre del grupo de reglas. Puedes elegir el nombre que desees.
 
 spec.groups.rules: Lista de reglas dentro del grupo.
 
