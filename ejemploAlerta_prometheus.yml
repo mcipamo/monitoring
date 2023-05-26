@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: ejemplo-rule
+  namespace: tu-namespace
+spec:
+  groups:
+    - name: ejemplo-group
+      rules:
+        - alert: EjemploAlerta
+          expr: up == 0
+          for: 5m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Instancia de servicio no disponible"
+            description: "La instancia del servicio está caída o inaccesible."
