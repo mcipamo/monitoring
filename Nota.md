@@ -1,3 +1,6 @@
+>[!NOTE]
+>
+>Nota
 **metadata.name**: Es el nombre que le das a la regla de Prometheus.
 
 **metadata.namespace**: Especifica el namespace en el que deseas crear la regla.
