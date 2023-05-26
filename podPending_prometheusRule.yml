@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: regla-pod-pending
+  namespace: tu-namespace
+spec:
+  groups:
+    - name: reglas-pods
+      rules:
+        - alert: PodPendingAlert
+          expr: kube_pod_status_phase{phase="Pending"} == 1
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "Pod en estado Pending"
+            description: "El pod {{ $labels.namespace }}/{{ $labels.pod }} está en estado Pending."
